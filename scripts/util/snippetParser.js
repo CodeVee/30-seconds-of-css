@@ -51,9 +51,9 @@ const getCodeBlocks = str => {
       results.push(match)
     })
   }
-  const replacer = new RegExp(`\`\`\`${config.language}([\\s\\S]*?)\`\`\``, 'g')
-  const secondReplacer = new RegExp(`\`\`\`${config.secondLanguage}([\\s\\S]*?)\`\`\``, 'g')
-  const optionalReplacer = new RegExp(`\`\`\`${config.optionalLanguage}([\\s\\S]*?)\`\`\``, 'g')
+  const replacer = new RegExp(`\`\`\`${config.language.short}([\\s\\S]*?)\`\`\``, 'g')
+  const secondReplacer = new RegExp(`\`\`\`${config.secondLanguage.short}([\\s\\S]*?)\`\`\``, 'g')
+  const optionalReplacer = new RegExp(`\`\`\`${config.optionalLanguage.short}([\\s\\S]*?)\`\`\``, 'g')
   results = results.map(v =>
     v
       .replace(replacer, '$1')
